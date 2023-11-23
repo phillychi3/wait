@@ -3,4 +3,17 @@ menu:
   Archives: /archives
   Github: https://github.com/phillychi3
 
-headerimage: https://i.loli.best/90168652
+headerimage: https://i.loli.best/88588892
+
+customize:
+  test1:
+    type: text
+    text: '123'
+  test2":
+    type: image
+    image: 'https://nekos.best/api/v2/neko/ae8ca777-d7f6-400f-8600-69702ae26672.png'
+    url: 'https://dimden.dev/'
+  test3":
+    type: image
+    image: 'https://nekos.best/api/v2/neko/be1bef84-1789-40ec-b67d-a9287b82dc39.png'
+    url: 'https://dimden.dev/'

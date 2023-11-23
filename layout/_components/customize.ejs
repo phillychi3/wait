@@ -1,0 +1,11 @@
+<div class="customize">
+    <% if (item.type == 'text') { %>
+        <p><%= item.text %></p>
+    <% } else if (item.type == 'image') { %>
+        <div class="image">
+            <a href="<%= item.url %>">
+                <img src="<%= item.image %>">
+            </a>
+        </div>
+    <% } %>
+</div>

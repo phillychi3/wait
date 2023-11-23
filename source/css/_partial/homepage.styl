@@ -1,0 +1,48 @@
+.homepage {
+    height: 100vh;
+    .headerimage {
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100vh;
+        z-index :-999
+        overflow: hidden;
+    }
+    .header {
+        display: flex
+        align-items: baseline
+        justify-content: space-between
+        padding: 0 10px
+        backdrop-filter: blur(10px)
+
+        .blog-title .logo {
+            color: #FFFF;
+            font-size: 1.5em;
+            font-family: "Comic Sans MS",cursive,LiSu,sans-serif;
+            text-decoration: none;
+        }
+
+
+        .menu {
+            margin: 0;
+            padding: 0;
+
+            .menu-item {
+            display: inline-block;
+            margin-right: 10px;
+            }
+
+            .menu-item-link {
+            color: #AAA;
+            text-decoration: none;
+
+            &:hover {
+                color: #368CCB;
+            }
+            }
+        }
+        }
+
+}

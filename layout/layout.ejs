@@ -1,11 +1,19 @@
+<!-- 主要頁面 -->
 <!DOCTYPE html>
 <html>
   <%- partial('_partial/head') %>
   <body>
+    <%- partial('_partial/home') %>
     <div class="container">
-      <%- partial('_partial/header') %>
       <main class="main">
-        <%- body %>
+        <div class="row">
+          <div class="col col-md-3 col-md-3point5 d-none d-lg-block" id="sidebar">
+            <%- partial('_partial/sidebar') %>
+          </div>
+          <div class="col">
+            <%- body %>
+          </div>
+        </div>
       </main>
     </div>
     <%- partial('_partial/after-footer') %>
