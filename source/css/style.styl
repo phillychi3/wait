@@ -1,7 +1,23 @@
+:root {
+  --backgroung-color: #F2F2F2;
+  --font-color: #333333;
+  --rgba-font-color: rgba(51, 51, 51, 0.8);
+  --icon-color: #333333;
+  --color-animation: color 0.3s ease-in-out, background-color .3s ease-in-out;
+}
+
+:root[data-theme="dark"]{
+  --backgroung-color: #333333;
+  --font-color: #F2F2F2;
+  --rgba-font-color: rgba(255,255,255, 0.8);
+  --icon-color: #F2F2F2;
+}
+
 body {
-  background-color: #F2F2F2;
+  background-color: var(--backgroung-color);
   font-size: 1.25rem;
   line-height: 1.5;
+  transition: var(--color-animation);
 }
 
 .container {
