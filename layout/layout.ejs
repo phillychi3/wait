@@ -1,19 +1,42 @@
-<!-- 主要頁面 -->
+<%
+    let type = "post";
+    if (is_home()) type = "index";
+    if (is_post() || is_page()) type = "post";
+    if (is_category() || page.type === "categories") type = "categories";
+    if (is_tag() || page.type === "tags") type = "tags";
+    if (is_archive()) type = "archive";
+
+    let title =  config.title + " - " + page.title;
+    if (is_home()) title = config.title;
+    if (is_post() || is_page()) title = config.title + " - " + page.title;
+    if (is_category()) title = config.title + "Categories" + page.category;
+    if (is_tag()) title = "Tags: " + page.tag + " | " + config.title;
+    if (is_archive()) title = config.title + " - " + "Archives";
+    console.log("layout.ejs", type, title);
+%>
+
 <!DOCTYPE html>
 <html>
-  <%- partial('_partial/head') %>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title><%= config.title +  %></title>
+    <%- css('css/bootstrap.min.css') %>
+    <%- css('css/style.css') %>
+    <script>
+      let themecolor = localStorage.getItem('theme');
+      if (themecolor == null) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      } else {
+        document.documentElement.setAttribute('data-theme', themecolor);
+      }
+    </script>
+  </head>
   <body>
     <%- partial('_partial/home') %>
     <div class="container">
       <main class="main">
-        <div class="row">
-          <div class="col col-md-3 col-md-3point5 d-none d-lg-block" id="sidebar">
-            <%- partial('_partial/sidebar') %>
-          </div>
-          <div class="col">
-            <%- body %>
-          </div>
-        </div>
+        <%- partial(type) %>
       </main>
     </div>
     <%- partial('_partial/after-footer') %>

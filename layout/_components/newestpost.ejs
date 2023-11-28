@@ -1,0 +1,18 @@
+<div class="newpost">
+  <div class="cardtitle">最新文章</div>
+  <% const limit =5 %>
+  <% for (let i = 0; i < page.posts.length && i < limit; i++) { %>
+    <% const post=page.posts.data[i] %>
+    <div class="newpost-item">
+      <div class="title">
+        <a class="" href="<%- url_for(post.path) %>"><%= post.title %></a>
+      </div>
+      <div class="date">
+        <%= date(post.date, "YYYY-MM-DD") %>
+      </div>
+    </div>
+  <% } %>
+
+
+
+</div>
