@@ -1,5 +1,6 @@
 :root {
   --backgroung-color: #F2F2F2;
+  --card-backgroung-color: #FFFFFF;
   --font-color: #333333;
   --rgba-font-color: rgba(0, 0, 0, 0.8);
   --rgba-font-light-color: rgba(0, 0, 0, 0.6);
@@ -9,6 +10,7 @@
 
 :root[data-theme="dark"]{
   --backgroung-color: #333333;
+  --card-backgroung-color: #444444;
   --font-color: #F2F2F2;
   --rgba-font-color: rgba(255,255,255, 0.8);
   --rgba-font-light-color: rgba(255,255,255, 0.6);
@@ -25,6 +27,7 @@ body {
 .container {
   // max-width: 960px;
   margin: 0 auto;
+  padding-top: 2em;
 }
 
 a {
@@ -35,6 +38,7 @@ a {
 
 @import "_partial/homepage";
 @import "_partial/post";
+@import "_partial/postlist";
 @import "_partial/archive";
 @import "_partial/paginator";
 @import "_partial/sidebar";

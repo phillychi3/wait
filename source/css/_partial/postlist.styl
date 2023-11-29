@@ -1,0 +1,44 @@
+
+.postlist  {
+  .post-item:first-child {
+    margin-top: 0;
+  }
+  .post-item {
+    margin-top: 1em;
+    background-color: var(--card-backgroung-color);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+  }
+  .post-image {
+    img {
+      width: 100%;
+      object-fit: cover;
+      height: 200px;
+    }
+  }
+  .post-show {
+    padding: 1em;
+  }
+
+  .post-title {
+    font-size: 1.5em;
+
+    .post-title-link {
+      color: var(--font-color);
+      text-decoration: none;
+    }
+  }
+
+  .post-content {
+    a {
+      color: #368CCB;
+      text-decoration: none;
+    }
+  }
+
+  .post-meta {
+    color: #BABABA;
+  }
+}
