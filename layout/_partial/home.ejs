@@ -1,4 +1,8 @@
 <div class="homepage">
     <%- partial('_partial/header') %>
-    <%- partial('_partial/headerimage') %>
+    <% if(type=="index"){ %>
+        <%- partial('_partial/headerimage',{height:'headfill',type:type}) %>
+    <% }else{ %>
+        <%- partial('_partial/headerimage',{height:'head40',type:type}) %>
+    <% } %>
 </div>

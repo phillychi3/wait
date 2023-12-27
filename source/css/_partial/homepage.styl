@@ -1,48 +1,106 @@
-.homepage {
-    height: 100vh;
-    .headerimage {
+.homepage
+    .headerimage
+        position: relative;
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
         width: 100%;
-        height: 100vh;
         z-index :-999
         overflow: hidden;
-    }
-    .header {
+
+
+    .headerimage::before
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.3);
+        z-index: -1;
+
+
+    .headfill
+        height: 100vh;
+
+    .head40
+        height: 40vh;
+
+    .header
         display: flex
         align-items: baseline
         justify-content: space-between
-        padding: 0 10px
-        backdrop-filter: blur(10px)
+        padding: 10px 10px
+        backdrop-filter: blur(20px)
+        transition: all 0.5s ease-in-out
 
-        .blog-title .logo {
+        .blog-title .logo
             color: #FFFF;
             font-size: 1.5em;
             font-family: "Comic Sans MS",cursive,LiSu,sans-serif;
             text-decoration: none;
-        }
 
 
-        .menu {
+
+        .menu
             margin: 0;
             padding: 0;
 
-            .menu-item {
-            display: inline-block;
-            margin-right: 10px;
-            }
+            .menu-item
+              display: inline-block;
+              margin-right: 10px;
 
-            .menu-item-link {
-            color: #AAA;
-            text-decoration: none;
 
-            &:hover {
-                color: #368CCB;
-            }
-            }
-        }
-        }
+            .menu-item-link
+              color: #AAA;
+              text-decoration: none;
 
-}
+              &:hover
+                  color: #368CCB;
+
+
+
+
+    .header-black
+        background-color: rgba(0, 0, 0, 0.767);
+        padding: 0 10px
+
+
+    .homemsg
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center
+        .title
+            @media (max-width: 768px)
+                font-size: 1.5em;
+
+            font-size: 3em;
+            color: #fff;
+            font-family: "Comic Sans MS",cursive,LiSu,sans-serif;
+            text-shadow: 0 0 10px #000;
+            margin-bottom: 20px;
+
+        .subtitle
+            @media (max-width: 768px)
+                font-size: 1.3em;
+
+            font-size: 2em;
+            color: #fff;
+            font-family: "Comic Sans MS",cursive,LiSu,sans-serif;
+            text-shadow: 0 0 10px #000;
+            margin-bottom: 20px;
+
+        .information
+            @media (max-width: 768px)
+                font-size: 0.8em;
+
+            font-size: 1.2em;
+            color: #fff;
+            font-family: "Comic Sans MS",cursive,LiSu,sans-serif;
+            text-shadow: 0 0 10px #000;
+            margin-bottom: 20px;
+
+
+
+
