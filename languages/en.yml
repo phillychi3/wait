@@ -4,5 +4,5 @@ Menu:
   Github: Github
 
 Paginator:
-  Prev: Prev
-  Next: Next
+  Prev: "<"
+  Next: ">"

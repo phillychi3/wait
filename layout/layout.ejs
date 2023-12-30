@@ -33,11 +33,17 @@
   </head>
   <body>
     <%- partial('_partial/home',{type:type}) %>
+    <% if(page.type != '404'){ %>
     <div class="container">
       <main class="main">
         <%- partial(type) %>
       </main>
     </div>
+    <% }else { %>
+      <%- partial('404') %>
+    <%} %>
+    <%- partial('_partial/footer') %>
+    <%- partial('_components/rightmenu') %>
     <%- partial('_partial/after-footer') %>
   </body>
 </html>

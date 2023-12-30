@@ -1,18 +1,25 @@
-.cardimage
+.cardimage::after
+    content: "";
     background-image: url("https://picsum.photos/400/800?random=1");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-size:cover;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    border-radius: 30px;
+
+.cardimage
     position: relative;
     padding: 20px;
     text-align: center;
     border-radius: 30px;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.884);
     margin-bottom: 1em;
-    // color: light-dark(var(--light-color), var(--dark-color));
 
     .userinfo
-
 
         .avatar
             overflow: hidden;
@@ -25,10 +32,8 @@
                 height: 100px;
                 width: 100px;
 
-
         .infotext
-            color: var(--rgba-font-color);
-
+            color: var(--font-color);
 
     .blogdata
         display: flex;
@@ -37,20 +42,13 @@
         .item
             padding: 20px;
 
-
-
             .bd-name
-                color: var(--rgba-font-color);
+                color: var(--font-color);
                 display: block;
-
 
             .bd-count
-                color: var(--rgba-font-color);
+                color: var(--font-color);
                 display: block;
-
-
-
-
 
     .userlinks
         display: flex;
@@ -64,9 +62,7 @@
             justify-content: center;
             width:3em;
             height: 3em;
-            color: rgba(0,0,0,0.8);
-
-
+            color: var(--font-color);
 
 .customize
     position: relative;
@@ -74,6 +70,10 @@
     border-radius: 30px;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.884);
     margin-bottom: 1em;
+
+    p
+        padding: 5px;
+        color: var(--font-color);
 
     .image
         img

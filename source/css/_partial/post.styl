@@ -1,52 +1,131 @@
-
-.code_top
-  display: flex;
-
-
-
-.hljs
-  background: rgba(0,0,0,0)!important;
-  color: #2c3e50!important;
-
-.gutter
-  background: rgba(0,0,0,0)!important;
-  color: #2c3e50!important;
-
-
-.gutter
-  padding-left:10px;
-  text-align: right;
-  color: #2c3e50!important;
-  position: sticky;
-  overflow-x: visible!important;
-  overflow-y: hidden;
-  left: 0;
-  z-index: 1;
-
-
-.code_table
-  background: #ecf0f1;
-  color: #2c3e50;
-  overflow-x: auto;
-  overflow-y: hidden;
-  max-width : 100%;
-  position: relative;
-
-
-
 .post
   margin: 1em auto;
   padding: 30px 50px;
-  background-color: #fff;
+  background-color: var(--card-backgroung-color);
   border: 1px solid #ddd;
   box-shadow: 0 0 2px #ddd;
   border-radius: 20px;
   overflow: hidden;
+  color: var(--font-color);
 
+  h1::before
+  h2::before
+  h3::before
+  h4::before
+  h5::before
+  h6::before
+    content: ""
+    display: block
+    height: 4rem
+    margin-top: -4rem
+
+  blockquote {
+      border-left: 4px solid #DDD;
+      padding: 0 15px;
+      color: #777;
+  }
+
+  blockquote>:first-child {
+      margin-top: 0px;
+  }
+
+  blockquote>:last-child {
+      margin-bottom: 0px;
+  }
+
+  ul
+  ol {
+      padding-left: 30px;
+  }
+
+  ol ol
+  ol ul
+      margin-top: 0;
+      margin-bottom: 0;
+
+  .indentedcode
+    background-color: var(--code-bg-color);
+    font-size: 18px;
+    overflow: auto;
+    padding: 6px 10px;
+    border-radius: 3px;
+  :not(pre) > code
+      margin: 0;
+      border: 1px solid var(--small-code-border-color)
+      border-radius: 3px;
+      background-color: var(--small-code-bg-color);
+      border-radius: 3px;
+      padding: 2px 4px;
+
+  a
+    color: #3498db;
+    transition: all 0.3s ease-in-out;
+    &:hover
+      background: #3498db;
+      color: #fff;
+      border-radius: 3px;
+      padding: 1px;
+
+  .hljs
+    background: rgba(0,0,0,0)!important;
+    color: var(--code-text-color)!important;
+    .hljs-punctuation
+      color: var(--code-text-color)!important;
+
+  .gutter
+    background: rgba(0,0,0,0)!important;
+    color: var(--code-text-color)!important;
+    padding-left:10px;
+    text-align: right;
+    color: var(--code-text-color)!important;
+    position: sticky;
+    overflow-x: visible!important;
+    overflow-y: hidden;
+    left: 0;
+    z-index: 1;
+
+  .code_table
+    background: var(--code-bg-color);
+    color: var(--code-text-color);
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width : 100%;
+    position: relative;
+    border-radius: 0 0 5px 5px;
+    td
+      border: 0
+      padding: 0
+
+  .code_top
+    display: flex;
+    justify-content: space-between;
+    background: var(--code-top-color)
+    border-radius: 5px 5px 0 0;
+
+    .code_langname
+      padding: 5px 10px;
+    .copybutton
+      padding: 5px 10px;
+      &:hover
+        color: var(--on-button-color)
 
 .post img
   max-width: 100%;
   height: auto;
   margin: 0 auto;
   display: block;
+
+table th,td
+  border: 1px solid var(--rgba-font-color)
+  padding : 5px 10px
+
+.thcenter
+  text-align: center
+
+.thright
+  text-align: right
+
+hr
+  background-color: var(--rgba-font-color)
+  margin: 30px;
 

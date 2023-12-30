@@ -4,8 +4,8 @@
             <img src="https://i.pinimg.com/originals/df/c5/fa/dfc5faf10d97e9c45fb29f8ecff17716.jpg" alt="avatar">
         </div>
         <div class="infotext">
-            <h3>John Doe</h3>
-            <p>Web DeveloperWeb DeveloperWeb DeveloperWeb Developer</p>
+            <h3><%= theme.infocard.author %></h3>
+            <p><%= theme.infocard.introduce %></p>
         </div>
     </div>
     <div class="blogdata">
@@ -29,13 +29,8 @@
         </div>
     </div>
     <div class="userlinks">
-        <a class="linkicon" href="#"><i class="fa-brands fa-github fa-xl"></i></a>
-        <a class="linkicon" href="#"><i class="fa-brands fa-twitter fa-xl"></i></a>
-        <a class="linkicon" href="#"><i class="fa-brands fa-linkedin fa-xl"></i></a>
-        <a class="linkicon" href="#"><i class="fa-brands fa-facebook fa-xl"></i></a>
-        <a class="linkicon" href="#"><i class="fa-brands fa-facebook fa-xl"></i></a>
-        <a class="linkicon" href="#"><i class="fa-brands fa-facebook fa-xl"></i></a>
-        <a class="linkicon" href="#"><i class="fa-brands fa-facebook fa-xl"></i></a>
-        <a class="linkicon" href="#"><i class="fa-brands fa-facebook fa-xl"></i></a>
+        <% theme.infocard.links.forEach(element => { %>
+            <a class="linkicon" href="<%=element['link']%>"><i class="<%=element['icon']%>"></i></a>
+        <%}); %>
     </div>
 </div>

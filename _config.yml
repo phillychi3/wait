@@ -5,6 +5,18 @@ menu:
 
 headerimage: https://i.loli.best/88588892
 
+infocard:
+  author: 白雲
+  introduce: 建設中...
+
+  links:
+    - icon: fa-brands fa-github fa-xl
+      link: "https://github.com/phillychi3"
+    - icon: fa-brands fa-twitter fa-xl
+      link: "https://x.com/philly030"
+    - icon: fa-brands fa-instagram fa-xl
+      link: "https://www.instagram.com/phillychi3/"
+
 customize:
   test1:
     type: text
@@ -12,8 +24,27 @@ customize:
   test2":
     type: image
     image: 'https://nekos.best/api/v2/neko/ae8ca777-d7f6-400f-8600-69702ae26672.png'
-    url: 'https://dimden.dev/'
+    url: '/'
   test3":
     type: image
     image: 'https://nekos.best/api/v2/neko/be1bef84-1789-40ec-b67d-a9287b82dc39.png'
-    url: 'https://dimden.dev/'
+    url: '/'
+
+
+waline:
+  enable: true
+  serverurl: https://blog-waline-ten-ivory.vercel.app/
+  emoji:
+    - https://unpkg.com/@waline/emojis@1.2.0/tw-emoji
+  lang: zh-TW
+  meta:
+    - nick
+    - mail
+    - link
+  requiredMeta:
+    - nick
+  login: disable
+  imageUploader: true
+  commentCount: true
+  pageSize: 10
+  wordLimit: 0

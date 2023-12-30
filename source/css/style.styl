@@ -1,20 +1,38 @@
 :root {
   --backgroung-color: #F2F2F2;
   --card-backgroung-color: #FFFFFF;
+  --light-cark-backgroung-color: #ffffff;
   --font-color: #333333;
   --rgba-font-color: rgba(0, 0, 0, 0.8);
   --rgba-font-light-color: rgba(0, 0, 0, 0.6);
   --icon-color: #333333;
   --color-animation: color 0.3s ease-in-out, background-color .3s ease-in-out;
+  --text-bg-hover: #3498db
+  --blur-color: #bc13fe;
+  --code-bg-color: #ecf0f1;
+  --code-text-color: #2c3e50;
+  --code-top-color: #d3d6db;
+  --small-code-bg-color: #ecf0f1;
+  --small-code-border-color: #ddd;
+  --on-button-color: #444;
 }
 
 :root[data-theme="dark"]{
   --backgroung-color: #333333;
-  --card-backgroung-color: #444444;
+  --card-backgroung-color: #21252b;
+  --light-cark-backgroung-color: #555555;
   --font-color: #F2F2F2;
   --rgba-font-color: rgba(255,255,255, 0.8);
   --rgba-font-light-color: rgba(255,255,255, 0.6);
   --icon-color: #F2F2F2;
+  --text-bg-hover: #2980b9
+  --blur-color: #bc13fe;
+  --code-bg-color: #444;
+  --code-text-color: #ecf0f1;
+  --code-top-color: #303841;
+  --small-code-bg-color: #222;
+  --small-code-border-color: #222;
+  --on-button-color: #c9c9c9
 }
 
 body {
@@ -42,3 +60,5 @@ a {
 @import "_partial/archive";
 @import "_partial/paginator";
 @import "_partial/sidebar";
+@import "_partial/rightmenu";
+@import "_partial/footer";

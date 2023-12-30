@@ -40,10 +40,44 @@ figureHighlight.forEach((block) => {
 
 const tbody = document.querySelectorAll('table');
 tbody.forEach((block) => {
+    if (block.parentNode && !block.parentNode.classList.contains('highlight')) {
+        return;
+    }
     const codectx = document.createElement('div');
     codectx.classList.add('code_table');
     // 新增codectx div把table包起來
     block.parentNode.insertBefore(codectx, block);
     codectx.appendChild(block);
 
+});
+
+const allth = document.querySelectorAll('table th');
+allth.forEach((block) => {
+    if (block.getAttribute('align') === 'center') {
+        block.classList.add('thcenter');
+    }else if (block.getAttribute('align') === 'right') {
+        block.classList.add('thright');
+    }
+});
+
+document.querySelectorAll('pre > code:not(.hljs)').forEach(function(codeElement) {
+    var preElement = codeElement.parentElement;
+    preElement.classList.add('indentedcode');
+});
+
+const copybutton = document.querySelectorAll('.copybutton');
+copybutton.forEach((block) => {
+    block.addEventListener('click', async() => {
+        const code = block.parentNode.parentNode.parentNode.querySelector('code');
+        const text = code.innerText;
+        try {
+            await navigator.clipboard.writeText(text);
+            block.classList.add('copied');
+            setTimeout(() => {
+                block.classList.remove('copied');
+            }, 2000);
+        } catch (err) {
+            console.error('Failed to copy text: ', err);
+        }
+    });
 });
