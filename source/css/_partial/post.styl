@@ -8,6 +8,16 @@
   overflow: hidden;
   color: var(--font-color);
 
+  h1
+  h2
+  h3
+  h4
+  h5
+  h6
+    margin: 1.5em 0 0.5em 0;
+    font-weight: 600;
+    line-height: 1.4;
+
   h1::before
   h2::before
   h3::before
@@ -19,24 +29,28 @@
     height: 4rem
     margin-top: -4rem
 
-  blockquote {
+  strong
+    text-shadow:
+      0 0 1px var(--shadow-color)
+
+  blockquote
       border-left: 4px solid #DDD;
       padding: 0 15px;
       color: #777;
-  }
 
-  blockquote>:first-child {
+
+  blockquote>:first-child
       margin-top: 0px;
-  }
 
-  blockquote>:last-child {
+
+  blockquote>:last-child
       margin-bottom: 0px;
-  }
+
 
   ul
-  ol {
+  ol
       padding-left: 30px;
-  }
+
 
   ol ol
   ol ul
