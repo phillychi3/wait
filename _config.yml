@@ -3,12 +3,12 @@ menu:
   Archives: /archives
   Github: https://github.com/phillychi3
 
-headerimage: https://i.loli.best/88588892
+headerimage: https://cdn.discordapp.com/attachments/927960120116260864/931775142298812467/333580.jpg?ex=65a21939&is=658fa439&hm=e35272ad8102d47b3a027e2a46b0b02a5d82a52b200e864ea803357faa9b20f2&
+background: 'https://i.waifu.pics/38QXoHc.jpeg'
 
 infocard:
   author: 白雲
   introduce: 建設中...
-
   links:
     - icon: fa-brands fa-github fa-xl
       link: "https://github.com/phillychi3"

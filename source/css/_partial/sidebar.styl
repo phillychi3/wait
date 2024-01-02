@@ -1,6 +1,6 @@
 .cardimage::after
     content: "";
-    background-image: url("https://picsum.photos/400/800?random=1");
+    background-image: url(hexo-config('background'))
     background-size:cover;
     opacity: 0.5;
     top: 0;
@@ -45,6 +45,7 @@
             .bd-name
                 color: var(--font-color);
                 display: block;
+                white-space: nowrap;
 
             .bd-count
                 color: var(--font-color);
