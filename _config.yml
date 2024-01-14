@@ -48,3 +48,7 @@ waline:
   commentCount: true
   pageSize: 10
   wordLimit: 0
+
+GAnalytics:
+  enable: true
+  id: G-XV0QDHZQQ5

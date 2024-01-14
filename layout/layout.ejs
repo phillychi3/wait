@@ -31,6 +31,15 @@
       }
     </script>
   </head>
+  <% if (theme.GAnalytics.enable) { %>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XV0QDHZQQ5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '<%= theme.GAnalytics.id %>');
+    </script>
+  <% } %>
   <body>
     <%- partial('_partial/home',{type:type}) %>
     <% if(page.type != '404'){ %>
