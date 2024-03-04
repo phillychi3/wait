@@ -12,6 +12,8 @@
     if (is_category()) title = config.title + "Categories" + page.category;
     if (is_tag()) title = "Tags: " + page.tag + " | " + config.title;
     if (is_archive()) title = config.title + " - " + "Archives";
+    let description = config.description;
+    if (is_post()) description = page.excerpt;
 %>
 
 <!DOCTYPE html>
@@ -20,6 +22,28 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <title><%= title %></title>
+    <meta property="og:title" content="<%= title %>">
+    <meta property="og:site_name" content="<%= title %>">
+    <meta property="twitter:title" content="<%= title %>">
+
+    <meta name="keywords" content="<%= config.keywords %>">
+    <meta name="author" content="<%= config.author %>">
+
+    <meta name="description" content="<%= description %>">
+    <meta property="og:description" content="<%= description %>">
+    <meta property="twitter:description" content="<%= description %>">
+
+    <meta property="og:image" content="<%= theme.headerimage %>">
+    <meta property="og:image:secure_url" content="<%= theme.headerimage %>">
+    <meta property="twitter:image" content="<%= theme.headerimage %>">
+    <meta property="og:url" content="<%= config.url %>">
+    <meta property="og:type" content="website">
+    <meta property="twitter:card" content="summary_large_image">
+
+    <meta name="abstract" content="<%= config.title %>">
+    <meta name="subject" content="<%= config.title %>">
+
+
     <%- css('css/bootstrap.min.css') %>
     <%- css('css/style.css') %>
     <script>
