@@ -1,39 +1,32 @@
 menu:
   Home: /
   Archives: /archives
-  Github: https://github.com/phillychi3
 
-headerimage: https://pixiv.cat/88588892.jpg
-background: 'https://i.waifu.pics/38QXoHc.jpeg'
+headerimage: edit me
+background: edit me
+
+startyear: 2024
 
 infocard:
-  author: 白雲
-  introduce: 建設中...
+  author: you name
+  introduce: edit me
   links:
     - icon: fa-brands fa-github fa-xl
-      link: "https://github.com/phillychi3"
-    - icon: fa-brands fa-twitter fa-xl
-      link: "https://x.com/philly030"
-    - icon: fa-brands fa-instagram fa-xl
-      link: "https://www.instagram.com/phillychi3/"
+      link: https://github.com/phillychi3
 
 customize:
   test1:
     type: text
-    text: '123'
+    text: example
   test2":
     type: image
-    image: 'https://nekos.best/api/v2/neko/ae8ca777-d7f6-400f-8600-69702ae26672.png'
-    url: '/'
-  test3":
-    type: image
-    image: 'https://nekos.best/api/v2/neko/be1bef84-1789-40ec-b67d-a9287b82dc39.png'
-    url: '/'
+    image: https://nekos.best/api/v2/neko/ae8ca777-d7f6-400f-8600-69702ae26672.png
+    url: https://www.google.com
 
 
 waline:
-  enable: true
-  serverurl: https://blog-waline-ten-ivory.vercel.app/
+  enable: false
+  serverurl:
   emoji:
     - https://unpkg.com/@waline/emojis@1.2.0/tw-emoji
   lang: zh-TW
@@ -50,5 +43,5 @@ waline:
   wordLimit: 0
 
 GAnalytics:
-  enable: true
-  id: G-XV0QDHZQQ5
+  enable: false
+  id:
