@@ -1,11 +1,12 @@
 menu:
   Home: /
   Archives: /archives
+  Tags: /tags
 
 headerimage: edit me
 background: edit me
 
-startyear: 2024
+startyear: 2025
 
 infocard:
   author: you name

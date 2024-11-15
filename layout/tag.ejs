@@ -1,0 +1,32 @@
+<%
+  let type = ""; if (is_tag() || page.type === "tags") type = "tag";
+  let posts = page.posts.toArray();
+%>
+
+<div class="row">
+  <div class="col col-md-3 col-md-3point5 d-none d-lg-block" id="sidebar">
+    <%- partial('_partial/sidebar') %>
+  </div>
+  <div class="col">
+    <div class="tags">
+      <% site.tags.map(a => a.name).map(function(tag) { %>
+      <a href="<%- url_for('tags/' + tag) %>" class="tag-link">
+        <i class="tag-text"> <%= tag %> </i>
+      </a>
+      <% }) %>
+    </div>
+
+    <% if (type) { %>
+      <% for (var i in posts) { %>
+        <p class="tag-post-title">
+          <a href="<%- url_for(posts[i].path) %>" class="tag-post-link">
+            <%- date(posts[i].date, 'YYYY-MM-DD') %>
+            <%- posts[i].title %>
+          </a>
+        </p>
+      <% } %>
+    <% } %>
+  </div>
+</div>
+
+
