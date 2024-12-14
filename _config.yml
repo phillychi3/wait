@@ -2,6 +2,7 @@ menu:
   Home: /
   Archives: /archives
   Tags: /tags
+  Friends: /friend
 
 headerimage: edit me
 background: edit me
@@ -42,6 +43,7 @@ waline:
   commentCount: true
   pageSize: 10
   wordLimit: 0
+
 
 GAnalytics:
   enable: false

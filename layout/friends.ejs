@@ -1,0 +1,24 @@
+<div class="row">
+
+  <div class="col">
+    <div class="friend-page">
+      <div class="friend-list">
+        <% site.data.friends.forEach(function(friend){ %>
+        <div class="friend-item">
+          <a href="<%= friend.url %>" target="_blank">
+            <img
+              src="<%= friend.avatar %>"
+              alt="<%= friend.name %>"
+              class="friend-avatar"
+            />
+            <div class="friend-info">
+              <h3 class="friend-name"><%= friend.name %></h3>
+              <p class="friend-desc"><%= friend.desc %></p>
+            </div>
+          </a>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+  </div>
+</div>

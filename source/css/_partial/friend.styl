@@ -1,0 +1,50 @@
+.friend-page
+  margin: 1em auto
+  padding: 30px 50px
+  background-color: var(--card-backgroung-color)
+  border: 1px solid #ddd
+  box-shadow: 0 0 2px #ddd
+  border-radius: 20px
+  color: var(--font-color)
+
+.friend-list
+  display: flex
+  flex-wrap: wrap
+  gap: 20px
+  justify-content: center
+
+.friend-item
+  width: 300px
+  padding: 15px
+  border-radius: 15px
+  background: var(--light-cark-backgroung-color)
+  transition: transform 0.3s ease
+
+  &:hover
+    transform: translateY(-5px)
+    box-shadow: 0 0 10px var(--blur-color)
+
+  a
+    display: flex
+    align-items: center
+    gap: 15px
+    text-decoration: none
+    color: var(--font-color)
+
+.friend-avatar
+  width: 60px
+  height: 60px
+  border-radius: 50%
+  object-fit: cover
+
+.friend-info
+  flex: 1
+
+  .friend-name
+    margin: 0 0 5px
+    font-size: 1.2em
+
+  .friend-desc
+    margin: 0
+    font-size: 0.9em
+    color: var(--rgba-font-light-color)

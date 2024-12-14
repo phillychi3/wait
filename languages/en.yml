@@ -2,8 +2,12 @@ Menu:
   Home: Home
   Archives: Archives
   Tags: Tags
+  Friends: Friends
   Github: Github
 
 Paginator:
   Prev: "<"
   Next: ">"
+
+Friends:
+  Title: Friends

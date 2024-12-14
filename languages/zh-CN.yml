@@ -2,8 +2,12 @@ Menu:
   Home: 首页
   Archives: 归档
   Tags: 标签
+  Friends: 友链
   Github: Github
 
 Paginator:
   Prev: "<"
   Next: ">"
+
+Friends:
+  Title: 友链页面
