@@ -1,5 +1,33 @@
 .homepage
     position relative
+
+    .darkmode-toggle
+      margin: 0 1rem
+
+    .darkmode-button
+      background: none
+      border: none
+      cursor: pointer
+      padding: 0.5rem
+      font-size: 1.2rem
+      line-height: 1
+      display: flex
+      align-items: center
+      justify-content: center
+
+      .sun-icon
+      .moon-icon
+        position: absolute
+        transition: opacity 0.3s ease
+
+      .sun-icon
+        color: #e5e5e5
+        opacity: 0
+
+      .moon-icon
+        color: #e5e5e5
+        opacity: 0
+
     .headerimage
         position: relative;
         background-attachment: fixed;
@@ -102,18 +130,28 @@
             text-shadow: 0 0 10px #000;
             margin-bottom: 20px;
 
-    .issvg {
+    .issvg
         width: 100%;
         position: absolute;
         bottom: 0;
         z-index: -999;
-
-        svg {
+        transition: var(--color-animation);
+        svg
             width: 100%;
             height: 100%;
-        }
-    }
 
 
 
+:root[data-theme="light"]
+  .darkmode-button
+    .sun-icon
+      opacity: 0
+    .moon-icon
+      opacity: 1
 
+:root[data-theme="dark"]
+  .darkmode-button
+    .sun-icon
+      opacity: 1
+    .moon-icon
+      opacity: 0

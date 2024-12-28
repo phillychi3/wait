@@ -3,8 +3,8 @@
     <a href="<%- url_for() %>" class="logo"><%= config.title %></a>
   </div>
   <nav class="navbar">
+    <%- partial('_components/darkmode') %>
     <ul class="menu">
-      <%- partial('_components/darkmode') %>
       <% for (name in theme.menu) { %>
         <li class="menu-item">
           <a href="<%- url_for(theme.menu[name]) %>" class="menu-item-link"><%- __('Menu.' + name) %></a>
