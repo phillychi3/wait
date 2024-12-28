@@ -62,37 +62,71 @@
         backdrop-filter: blur(20px)
         transition: all 0.5s ease-in-out
 
+
         .blog-title .logo
             color: #FFFF;
             font-size: 1.5em;
             font-family: "Comic Sans MS",cursive,LiSu,sans-serif;
             text-decoration: none;
+        .navbar
+          .menu
+              margin: 0;
+              padding: 0;
+              .menu-item
+                display: inline-block;
+                margin-right: 10px;
+              .menu-item-link
+                color: #AAA;
+                text-decoration: none;
+                &:hover
+                    color: #368CCB;
 
+        .mobile-menu
+          display: none
+          position: fixed
+          top: 80px
+          left: 0
+          width: 100%
+          background: var(--backgroung-color)
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1)
+          transition: all 0.5s ease-in-out
 
+          &.active
+            display: block
+            animation: slideDown 0.3s ease forwards
 
-        .menu
-            margin: 0;
-            padding: 0;
+          .menu
+            padding: 1rem
+            margin: 0
+            list-style: none
 
             .menu-item
-              display: inline-block;
-              margin-right: 10px;
+              padding: 0.8rem 1rem
+              .menu-item-link
+                color: var(--font-color)
 
+        .menu-toggle
+          display: none
+          background: none
+          border: none
+          color: var(--font-color)
+          font-size: 1.5rem
+          cursor: pointer
+          padding: 0.5rem
 
-            .menu-item-link
-              color: #AAA;
-              text-decoration: none;
+        @media screen and (max-width: 768px)
+          .navbar .menu
+            display: none
 
-              &:hover
-                  color: #368CCB;
-
-
+          .menu-toggle
+            display: block
 
 
     .header-black
         background-color: rgba(0, 0, 0, 0.767);
         padding: 0 10px
-
+        .mobile-menu
+          top: 60px
 
     .homemsg
         position: absolute;
@@ -155,3 +189,14 @@
       opacity: 1
     .moon-icon
       opacity: 0
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-10%)
+    opacity: 0
+  }
+  to {
+    transform: translateY(0)
+    opacity: 1
+  }
+}

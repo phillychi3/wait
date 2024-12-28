@@ -4,12 +4,28 @@
   </div>
   <nav class="navbar">
     <%- partial('_components/darkmode') %>
+    <button class="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </button>
     <ul class="menu">
       <% for (name in theme.menu) { %>
-        <li class="menu-item">
-          <a href="<%- url_for(theme.menu[name]) %>" class="menu-item-link"><%- __('Menu.' + name) %></a>
-        </li>
+      <li class="menu-item">
+        <a href="<%- url_for(theme.menu[name]) %>" class="menu-item-link"
+          ><%- __('Menu.' + name) %></a
+        >
+      </li>
       <% } %>
     </ul>
   </nav>
+  <div class="mobile-menu">
+    <ul class="menu">
+      <% for (name in theme.menu) { %>
+      <li class="menu-item">
+        <a href="<%- url_for(theme.menu[name]) %>" class="menu-item-link"
+          ><%- __('Menu.' + name) %></a
+        >
+      </li>
+      <% } %>
+    </ul>
+  </div>
 </header>
