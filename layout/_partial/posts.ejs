@@ -1,19 +1,29 @@
 <section class="postlist">
-    <% page.posts.each(function (post) { %>
-    <div class="post-item">
-      <div class="post-image">
-        <a href="<%- url_for(post.path) %>">
-          <img src="https://i.pinimg.com/736x/fc/a9/b5/fca9b5e8abf6f1b8e0cf863ef88a9af2.jpg" alt="<%- post.title %>">
-        </a>
+  <% page.posts.each(function (post) { %>
+  <div class="post-item">
+    <div class="post-image">
+      <a href="<%- url_for(post.path) %>">
+        <%
+          let imgSrc = 'https://i.pinimg.com/736x/fc/a9/b5/fca9b5e8abf6f1b8e0cf863ef88a9af2.jpg';
+          if (post.content) {
+            const imgRegex = /<img[^>]+src="([^">]+)"/;
+            const match = post.content.match(imgRegex);
+            if (match && match[1]) {
+              imgSrc = match[1];
+            }
+          }
+        %>
+        <img src="<%= post.cover || imgSrc %>" alt="<%- post.title %>">
+      </a>
+    </div>
+    <div class="post-show">
+      <div class="post-title">
+        <a class="post-title-link" href="<%- url_for(post.path) %>"><%= post.title %></a>
       </div>
-      <div class="post-show">
-        <div class="post-title">
-          <a class="post-title-link" href="<%- url_for(post.path) %>"><%= post.title %></a>
-        </div>
-        <div class="post-meta">
-          <span class="post-time"><%- date(post.date, "YYYY-MM-DD") %></span>
-        </div>
+      <div class="post-meta">
+        <span class="post-time"><%- date(post.date, "YYYY-MM-DD") %></span>
       </div>
     </div>
-    <% }) %>
+  </div>
+  <% }) %>
 </section>
